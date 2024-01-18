@@ -1,12 +1,13 @@
 function solution(array, commands) {
   let answer = [];
   for (let i of commands){
-      let selected_array;
-      selected_array = array.slice(i[0] - 1, i[1]);
-      selected_array = selected_array.sort(function (a, b) {
+      let selected_array = array.slice(i[0] - 1, i[1]);
+      let order;
+      selected_array.sort(function (a, b) {
           return a - b;
       })
-      answer.push(selected_array[i[2] - 1]);
+      order = selected_array[i[2] - 1];
+      answer.push(order);
   }
   return answer;
 }
