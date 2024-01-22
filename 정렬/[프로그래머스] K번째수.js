@@ -1,5 +1,7 @@
 // https://school.programmers.co.kr/learn/courses/30/lessons/42748
 
+// 2024-01-17
+// 성공
 function solution(array, commands) {
   var answer = [];
 
