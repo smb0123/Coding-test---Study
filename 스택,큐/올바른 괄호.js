@@ -24,4 +24,3 @@ function solution(s) {
 
   return answer;
 }
-ㅎ;
