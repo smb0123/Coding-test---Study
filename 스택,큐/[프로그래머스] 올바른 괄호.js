@@ -7,23 +7,10 @@
 function solution(s) {
   var answer = true;
 
-  const open = [];
-  const close = [];
-
-  for (let i = 0; i < s.length; i++) {
-    const bracket = s[i];
-    if (i === 0 && bracket === ')') {
-      answer = false;
-      break;
-    }
-    if (bracket === '(') {
-      open.push(bracket);
-      continue;
-    }
-    close.push(bracket);
-  }
-
-  if (open.length !== close.length) answer = false;
+  console.log(s.split('('));
+  console.log(s.split(')'));
 
   return answer;
 }
+
+solution('())(()');
