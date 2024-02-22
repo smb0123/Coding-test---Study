@@ -1,6 +1,6 @@
 function solution(phone_book) {
   var answer = true;
-  const book_length = phone_book.length - 1; // 반복문에서 이용할 phone_book의 길이
+  const book_length = phone_book.length; // 반복문에서 이용할 phone_book의 길이
   phone_book.sort(); // phone_book 정렬 (길이가 짧은 애들 앞으로)
 
   for (let i = 0; i < book_length; i++) {
