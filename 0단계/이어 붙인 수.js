@@ -8,7 +8,7 @@ function solution(num_list) {
   for (let i = 0; i < num_list.length; i++) {
     num_list[i] % 2 !== 0 ? odd.push(num_list[i]) : even.push(num_list[i]);
   }
-  console.log(odd, even);
+
   for (let i = 0; i < odd.length; i++) {
     oddString += odd[i];
   }
