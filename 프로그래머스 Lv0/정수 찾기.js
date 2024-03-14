@@ -1,10 +1,8 @@
-function solution(rny_string) {
-  var answer = "";
-  for (let i of rny_string) {
-    if (i === "m") {
-      answer += "rn";
-    } else {
-      answer += i;
+function solution(num_list, n) {
+  var answer = 0;
+  for (let i of num_list) {
+    if (i === n) {
+      return 1;
     }
   }
   return answer;
