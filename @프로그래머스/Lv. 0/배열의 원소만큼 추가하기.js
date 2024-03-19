@@ -13,3 +13,13 @@ function solution(arr) {
 
   return answer;
 }
+
+// 2024-03-19
+// 성공2
+function solution(arr) {
+  var answer = [];
+
+  answer = arr.reduce((list, curr) => [...list, ...Array(curr).fill(curr)], []);
+
+  return answer;
+}
