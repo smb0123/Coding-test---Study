@@ -9,3 +9,15 @@ function solution(order) {
 
   return answer;
 }
+
+// 2024-03-21
+// 성공
+function solution(order) {
+  var answer = 0;
+
+  answer = [...order.toString()].filter(
+    (num) => num > 0 && num % 3 === 0
+  ).length;
+
+  return answer;
+}
