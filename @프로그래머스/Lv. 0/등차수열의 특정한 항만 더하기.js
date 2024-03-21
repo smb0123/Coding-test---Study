@@ -12,3 +12,16 @@ function solution(a, d, included) {
 
   return answer;
 }
+
+// 2024-03-21
+// 성공
+function solution(a, d, included) {
+  var answer = 0;
+
+  answer = included.reduce(
+    (acc, isTrue, idx) => (isTrue ? acc + a + d * idx : acc),
+    0
+  );
+
+  return answer;
+}
