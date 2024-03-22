@@ -19,3 +19,25 @@ function solution(n) {
 
   return answer;
 }
+
+// 2024-03-22
+// 성공
+function solution(n) {
+  var answer = 0;
+
+  function factorial(num) {
+    if (num === 1) return 1;
+    return num * factorial(num - 1);
+  }
+
+  let i = 1;
+  while (answer === 0) {
+    if (factorial(i) > n) {
+      answer = i - 1;
+      break;
+    }
+    i++;
+  }
+
+  return answer;
+}
