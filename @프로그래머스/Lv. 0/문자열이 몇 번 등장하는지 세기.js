@@ -14,3 +14,22 @@ function solution(myString, pat) {
 
   return answer;
 }
+
+// 2024-03-22
+// 성공
+function solution(myString, pat) {
+  var answer = 0;
+
+  const count = {};
+  const index = myString.indexOf(pat);
+  for (let i = index; i < myString.length; i++) {
+    const find = myString.indexOf(pat, i);
+    if (find !== -1) {
+      count[find] = 1;
+    }
+  }
+
+  answer = Object.keys(count).length;
+
+  return answer;
+}
