@@ -1,0 +1,23 @@
+// https://school.programmers.co.kr/learn/courses/30/lessons/120891
+
+// 2024-03-21
+// 실패
+function solution(order) {
+  var answer = 0;
+
+  answer = [...order.toString()].filter((num) => num % 3 === 0).length;
+
+  return answer;
+}
+
+// 2024-03-21
+// 성공
+function solution(order) {
+  var answer = 0;
+
+  answer = [...order.toString()].filter(
+    (num) => num > 0 && num % 3 === 0
+  ).length;
+
+  return answer;
+}
