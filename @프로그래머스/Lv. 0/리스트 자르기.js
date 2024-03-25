@@ -23,3 +23,20 @@ function solution(n, slicer, num_list) {
 
   return answer;
 }
+
+// 2024-03-25
+// 성공
+function solution(n, slicer, num_list) {
+  var answer = [];
+
+  const [a, b, c] = slicer;
+  const start = n === 1 ? 0 : a;
+  const end = n === 2 ? num_list.length - 1 : b;
+  const gap = n === 4 ? c : 1;
+
+  for (let i = start; i <= end; i += gap) {
+    answer.push(num_list[i]);
+  }
+
+  return answer;
+}
