@@ -18,3 +18,22 @@ function solution(arr) {
 
   return answer;
 }
+
+// 2024-03-25
+// 성공
+function solution(arr) {
+  var answer = [];
+
+  let num = 1;
+  while (arr.length !== num) {
+    if (arr.length > num) {
+      num *= 2;
+      continue;
+    }
+    arr = [...arr, ...Array(num - arr.length).fill(0)];
+  }
+
+  answer = arr;
+
+  return answer;
+}
