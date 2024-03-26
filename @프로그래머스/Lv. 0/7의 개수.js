@@ -12,3 +12,13 @@ function solution(array) {
 
   return answer;
 }
+
+// 2024-03-26
+// 성공
+function solution(array) {
+  var answer = 0;
+
+  answer = array.join('').split('7').length - 1;
+
+  return answer;
+}
