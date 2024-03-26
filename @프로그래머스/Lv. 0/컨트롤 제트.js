@@ -17,3 +17,23 @@ function solution(s) {
 
   return answer;
 }
+
+// 2024-03-26
+// 성공
+function solution(s) {
+  var answer = 0;
+
+  const stack = [];
+
+  s.split(' ').forEach((v) => {
+    if (v === 'Z') {
+      stack.pop();
+    } else {
+      stack.push(Number(v));
+    }
+  });
+
+  answer = stack.reduce((acc, curr) => acc + curr, 0);
+
+  return answer;
+}
