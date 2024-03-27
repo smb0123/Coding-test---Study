@@ -1,14 +1,11 @@
 function solution(myString, pat) {
   var answer = 0;
-  let idx = myString.indexOf(pat);
-  let slice;
-  while (idx != -1) {
-    slice = myString.slice(idx);
-    if (slice.indexOf(pat) >= 0) {
+  const arr = [];
+  for (let i = 0; i <= myString.length - pat.length; i++) {
+    if (myString.slice(i, i + pat.length) === pat) {
       answer++;
     }
-
-    console.log(idx);
   }
+
   return answer;
 }
