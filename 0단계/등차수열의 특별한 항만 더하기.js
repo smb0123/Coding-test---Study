@@ -4,13 +4,8 @@ function solution(a, d, included) {
   let save = 0;
 
   for (let i = 0; i < included.length; i++) {
-    if (i === 0) {
-      arr[i] = a;
-      save = arr[i];
-    } else if (i > 0) {
-      arr[i] = save + d;
-      save = arr[i];
-    }
+    arr.push(a);
+    a = a + d;
   }
 
   for (let i = 0; i < arr.length; i++) {
