@@ -34,3 +34,13 @@ function solution(numbers, k) {
 
   return answer;
 }
+
+// 2024-03-29
+// 성공
+function solution(numbers, k) {
+  var answer = 0;
+
+  answer = numbers[(--k * 2) % numbers.length];
+
+  return answer;
+}
