@@ -16,3 +16,21 @@ function solution(numbers, k) {
 
   return answer;
 }
+
+// 2024-03-29
+// 성공
+function solution(numbers, k) {
+  var answer = 0;
+
+  let count = 1;
+  let turn = 1;
+  while (count !== k) {
+    const nextTurn = turn + 2;
+    turn = nextTurn > numbers.length ? nextTurn % numbers.length : nextTurn;
+    count++;
+  }
+
+  answer = turn;
+
+  return answer;
+}
