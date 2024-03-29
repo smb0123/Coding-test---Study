@@ -21,3 +21,30 @@ function solution(my_string) {
 
   return answer;
 }
+
+// 2024-03-29
+// 성공
+function solution(my_string) {
+  var answer = 0;
+
+  function calculator(a, b, op) {
+    switch (op) {
+      case '+':
+        return a + Number(b);
+      case '-':
+        return a - Number(b);
+    }
+  }
+
+  const my_arr = my_string.split(' ');
+  let operator = '+';
+  answer = my_arr.reduce((acc, curr) => {
+    if (!Number.isInteger(Number(curr))) {
+      operator = curr;
+      return acc;
+    }
+    return calculator(acc, curr, operator);
+  }, 0);
+
+  return answer;
+}
