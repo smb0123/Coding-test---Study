@@ -31,3 +31,28 @@ function solution(str_list) {
 
   return answer;
 }
+
+// 2024-03-30
+// 성공
+function solution(str_list) {
+  var answer = [];
+
+  const indexL = str_list.indexOf('l');
+  const indexR = str_list.indexOf('r');
+
+  if (indexL === -1 && indexR === -1) {
+    return answer;
+  } else if (indexL === -1) {
+    return str_list.slice(indexR + 1, str_list.length);
+  } else if (indexR === -1) {
+    return str_list.slice(0, indexL);
+  }
+
+  if (indexL < indexR) {
+    answer = str_list.slice(0, indexL);
+  } else if (indexL > indexR) {
+    answer = str_list.slice(indexR + 1, str_list.length);
+  }
+
+  return answer;
+}
