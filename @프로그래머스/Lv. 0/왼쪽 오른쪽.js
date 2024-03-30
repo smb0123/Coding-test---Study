@@ -56,3 +56,23 @@ function solution(str_list) {
 
   return answer;
 }
+
+// 2024-03-30
+// 성공
+function solution(str_list) {
+  var answer = [];
+
+  for (let i = 0; i < str_list.length; i++) {
+    const direction = str_list[i];
+    if (direction === 'l') {
+      answer = str_list.slice(0, i);
+      break;
+    }
+    if (direction === 'r') {
+      answer = str_list.slice(i + 1);
+      break;
+    }
+  }
+
+  return answer;
+}
